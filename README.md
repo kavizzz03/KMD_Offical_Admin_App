@@ -63,4 +63,4 @@ KMDOfficial is an Android application built using **Java & Kotlin**, designed to
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/KMD_Offical_Admin_App.git
+git clone https://github.com/kavizzz03/KMD_Offical_Admin_App.git
