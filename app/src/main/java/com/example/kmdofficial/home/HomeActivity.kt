@@ -32,9 +32,14 @@ class HomeActivity : AppCompatActivity() {
         // RecyclerView for categories
         val recycler = findViewById<RecyclerView>(R.id.recyclerHome)
         recycler.layoutManager = LinearLayoutManager(this)
-        recycler.adapter = HomeAdapter(categories, this) // ✅ Pass context here
+        val adapter = HomeAdapter(categories, this)
+        recycler.adapter = adapter
 
-        // Settings shortcut button
+        // Fade-in animation for RecyclerView
+        recycler.alpha = 0f
+        recycler.animate().alpha(1f).setDuration(600).setStartDelay(200).start()
+
+        // Settings button
         val btnSettings = findViewById<Button>(R.id.btnSettings)
         btnSettings.setOnClickListener {
             startActivity(Intent(this, SettingsActivity::class.java))

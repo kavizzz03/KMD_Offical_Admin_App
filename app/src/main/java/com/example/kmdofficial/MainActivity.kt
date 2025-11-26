@@ -3,7 +3,7 @@ package com.example.kmdofficial
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.kmdofficial.home.HomeActivity
+import com.example.kmdofficial.login.LoginActivity
 import com.example.kmdofficial.language.LanguageActivity
 import com.example.kmdofficial.utils.LocaleHelper
 import com.example.kmdofficial.utils.Prefs
@@ -22,8 +22,8 @@ class MainActivity : AppCompatActivity() {
             // First launch → show language selection
             startActivity(Intent(this, LanguageActivity::class.java))
         } else {
-            // Already selected → go directly to Home
-            startActivity(Intent(this, HomeActivity::class.java))
+            // Already selected → go to Login first
+            startActivity(Intent(this, LoginActivity::class.java))
         }
 
         finish()

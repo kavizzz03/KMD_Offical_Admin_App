@@ -5,6 +5,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kmdofficial.R
@@ -28,14 +29,18 @@ class HomeAdapter(private val items: List<String>, private val context: Context)
         holder.title.text = item.replace("_", " ")
             .replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }
 
-        // Handle click
+        // Click listener
         holder.itemView.setOnClickListener {
             if (item == "products") {
                 val intent = Intent(context, ProductsHomeActivity::class.java)
                 context.startActivity(intent)
             }
-            // Add other category clicks here if needed
         }
+
+        // Slide-up staggered animation
+        val animation = AnimationUtils.loadAnimation(context, R.anim.slide_up)
+        animation.startOffset = (position * 100).toLong() // stagger each item by 100ms
+        holder.itemView.startAnimation(animation)
     }
 
     override fun getItemCount() = items.size
