@@ -1,0 +1,22 @@
+<resources>
+    <string name="select_language">භාෂාව තෝරන්න</string>
+    <string name="sinhala">සිංහල</string>
+    <string name="english">ඉංග්‍රීසි</string>
+
+    <string name="login">පුරන්න</string>
+    <string name="username">පරිශීලක නාමය</string>
+    <string name="password">මුරපදය</string>
+
+    <string name="home_title">මුල් පිටුව</string>
+
+    <string name="contact_messages">සම්බන්ධතා පණිවිඩ</string>
+    <string name="email_subscribers">විද්‍යුත් තැපැල් දායකයින්</string>
+    <string name="products">නිෂ්පාදන</string>
+    <string name="product_sales">විකුණුම්</string>
+    <string name="slideshow">ස්ලයිඩ්ෂෝ</string>
+    <string name="suppliers">සැපයුම්කරුවන්</string>
+
+    <string name="settings">සැකසුම්</string>
+    <string name="language">භාෂාව</string>
+    <string name="dark_mode">අඳුරු ප්‍රමාණය</string>
+</resources>
